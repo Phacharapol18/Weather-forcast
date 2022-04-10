@@ -93,7 +93,7 @@ for (let i = 0; i < co.length; i++) {
     }
 }
 document.querySelector('#city-input').value = localStorage.getItem('city')
-input.addEventListener('keydown', function (event){
+input.addEventListener('keyup', function (event){
     if(event.keyCode === 13){
         event.preventDefault();
         weather()
