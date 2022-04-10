@@ -21,7 +21,9 @@ background: #C0A080 ;
 footer{
     background-color: #4B6587;
     padding: 45px 0;
-    margin-top: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 p{
     color: #fff;
@@ -31,6 +33,7 @@ p{
     justify-content: space-between;
     padding: 20px;
 }
+
 
 .container {
     max-width: 100%;
@@ -57,4 +60,13 @@ p{
 #city-input{
     width: 65%;
     height: 45px;
+}
+
+
+/*media*/
+
+@media (max-width:1038px) {
+  footer{
+      position: static;
+  }  
 }

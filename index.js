@@ -5,7 +5,7 @@ let day3 = document.querySelector('.day3');
 let day4 = document.querySelector('.day4');
 let day5 = document.querySelector('.day5');
 let co = document.querySelectorAll('.co');
-
+let input = document.querySelector('#city-input');
 setInterval(function () {
     let time = moment().format('MM[/]DD[/]YYYY  HH:mm:ss')
     document.querySelector('.time').textContent = time;
@@ -93,7 +93,14 @@ for (let i = 0; i < co.length; i++) {
     }
 }
 document.querySelector('#city-input').value = localStorage.getItem('city')
-btn.addEventListener('click', weather)
+input.addEventListener('keydown', function (event){
+    if(event.keyCode === 13){
+        event.preventDefault();
+        weather()
+    }else{
+        btn.addEventListener('click',weather)
+    }
+})
 
 
 window.onload = weather;
